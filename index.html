@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>2D Transformation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="transform.js" async="async"></script>
+    </head>
+
+    <body>
+        <main>
+            <div >
+                <!-- SVG code here if need to take it out of CSS-->
+                <style>
+                    .imageContainer {
+                        margin: 0 auto;
+                        width: 30%;
+                        border: solid black 0.5px;
+                    }
+
+                    .slidecontainer {
+                    font-size:2em;
+                    }
+
+                    .sliderL,
+                    .sliderR {
+                        width: 40%;
+                    }
+
+                    .labelR,
+                    .sliderR {
+                        float: right;
+                    }
+                    .slidecontainer {
+                        width: 80%;
+                        margin: 0 auto;
+                    }
+
+                    #box {
+                        transform-origin: 50% 50%;
+                    }
+                </style>
+                <div class="imageContainer">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 220 169">
+                        <defs>
+                            <style>
+                                .cls-1,
+                                .cls-2 {
+                                    fill: #27aae1;
+                                    stroke: #231f20;
+                                    stroke-miterlimit: 10;
+                                }
+                                .cls-1 {
+                                    stroke-width: 6px;
+                                }
+                                .cls-2 {
+                                    stroke-width: 2px;
+                                }
+                            </style>
+                        </defs>
+
+                        <rect id="box" class="cls-1" x="63" y="20" width="91" height="64"/>
+                        <line id="yaxis" class="cls-2" x1="110" x2="110" y2="169"/>
+                        <line id="xaxis" class="cls-2" y1="86" x2="220" y2="86"/>
+                        <circle cx="50%" cy="50%" r="5" stroke="black" stroke-width="1" fill="red"/>
+
+                    </svg>
+                </div>
+
+                <fieldset class="slidecontainer">
+                    <legend>CSS code</legend>
+                    <code id="codeContainer"></code>
+                </fieldset>
+
+                <fieldset class="slidecontainer">
+                    <legend>SCALE - using a scale factor range 0-2</legend>
+                    <label for="xvalues">X:</label>
+                    <input type="range" min="0" max="200" value="100" class="sliderL" id="scaleSlideX" name="xvalues">
+                    <label for="yvalues" class="labelR">Y:</label>
+                    <input type="range" min="0" max="200" value="100" class="sliderR" id="scaleSlideY" name="yvalues">
+                </fieldset>
+
+                <fieldset class="slidecontainer">
+                    <legend>Rotate - using a deg range 0-360 around z axis</legend>
+                    <label for="zvaluer">Z:</label>
+                    <input type="range" min="0" max="360" value="0" class="sliderL" id="rotateSlideZ" name="zvaluer">
+
+                </fieldset>
+
+                <fieldset class="slidecontainer">
+                    <legend>Translate - using a % range -100 to 100</legend>
+                    <label for="xvaluet">X:</label>
+                    <input type="range" min="-100" max="100" value="0" class="sliderL" id="translateSlideX" name="xvaluet">
+                    <label for="yvaluet" class="labelR">Y:</label>
+                    <input type="range" min="-100" max="100" value="0" class="sliderR" id="translateSlideY" name="yvaluet">
+                </fieldset>
+
+                <fieldset class="slidecontainer">
+                    <legend>Skew - using a deg range 0 to 180</legend>
+                    <label for="xvaluek">X:</label>
+                    <input type="range" min="0" max="180" value="0" class="sliderL" id="skewSlideX" name="xvaluek">
+                    <label for="yvaluek" class="labelR">Y:</label>
+                    <input type="range" min="0" max="180" value="0" class="sliderR" id="skewSlideY" name="yvaluek">
+                </fieldset>
+
+            </div>
+        </main>
+    </body>
+</html>
